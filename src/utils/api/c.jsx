@@ -146,7 +146,7 @@ export const seven = {
                totalRatingsString: "1K+ ratings",
                costForTwoMessage: "₹300 for two",
                cuisines: ["North Indian", "Tandoor"],
-               cloudinaryImageId: "ghar_jaisa_3.0_image"
+               cloudinaryImageId: "rk7cth2kczdv2cnflbd4"
              }
            }
          }

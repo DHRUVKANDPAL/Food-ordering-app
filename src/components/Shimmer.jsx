@@ -5,12 +5,12 @@ const Shimmer = () => {
     <div className="form-container">
       <div className="search">
         <input type="text" placeholder="Search for Restaurants ..." />
-        <button id="search-btn">
+        <button id="search-btn" aria-label="searchbtn">
           <i className="ri-search-line"></i>
         </button>
       </div>
       <div className="filter">
-        <button id="filter-btn">
+        <button id="filter-btn" aria-label="filterbtn">
           <i className="ri-filter-line"></i>
         </button>
       </div>

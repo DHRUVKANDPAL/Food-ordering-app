@@ -11,7 +11,7 @@ const Error = () => {
             {err.status}:{err.statusText}
          </div>
          <div className="error-description-2">{err.error.message}</div>
-         <button id="err-btn">
+         <button id="err-btn" aria-label="error-btn">
             <a href="/" className="return-button">
                Return to Home Page
             </a>

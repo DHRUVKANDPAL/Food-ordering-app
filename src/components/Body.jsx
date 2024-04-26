@@ -16,15 +16,35 @@ const Body = () => {
     // const data = await fetch(SWIGGY_API3);
     // const json = await data.json();
     // console.log(json);
-      setList(ResList);
-      setorig(ResList);
+      // setList(ResList);
+      // setorig(ResList);
+      await setTimeout(() => {
+        setList(ResList);
+        setorig(ResList);
+      }, 500);
   };
 
-
-
+  const handleScroll = () => {
+    
+    if (
+      window.innerHeight + document.documentElement.scrollTop <
+      document.documentElement.offsetHeight-300
+    )
+      return;
+    
+    setList([...List,...List]);
+  };
+ 
+  useEffect(() => {   
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
   return orig.length === 0 ? (
     <Shimmer />
   ) : (
+    
     <div className="wrap">
       <div className="form-container">
         <div className="search">
@@ -43,28 +63,28 @@ const Body = () => {
                 return (
                   res.info.name
                     .toLowerCase()
-                    .includes(SearchText.toLowerCase()) ||
+                    .includes(SearchText.toLowerCase().trim()) ||
                   res.info.cuisines
                     .join("")
                     .toLowerCase()
-                    .includes(SearchText.toLowerCase())
+                    .includes(SearchText.toLowerCase().trim())
                 );
               });
               setList(filteredList);
             }
           }}/>
           <button
-            id="search-btn"
+            id="search-btn" aria-label="search"
             onClick={() => {
               const filteredList = orig.filter((res) => {
                 return (
                   res.info.name
                     .toLowerCase()
-                    .includes(SearchText.toLowerCase()) ||
+                    .includes(SearchText.toLowerCase().trim()) ||
                   res.info.cuisines
                     .join("")
                     .toLowerCase()
-                    .includes(SearchText.toLowerCase())
+                    .includes(SearchText.toLowerCase().trim())
                 );
               });
               setList(filteredList);
@@ -75,12 +95,12 @@ const Body = () => {
         </div>
         <div className="filter">
           <button
-            id="filter-btn"
+            id="filter-btn" aria-label="filter"
             onClick={() => {
               // console.log(flag);
               const filteredList = orig.filter((res) => {
                 if (!flag) {
-                  return res.info.avgRating >= 4.3;
+                  return res.info.avgRating >= 4.5;
                 } else {
                   return res;
                 }
@@ -95,8 +115,8 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        {List.map((restaurant) => {
-          return <Link key={restaurant.info.id} className="menulink" to={"/restaurant/"+restaurant.info.id} ><ResCard  resData={restaurant} /></Link>;
+        {List.map((restaurant,i) => {
+          return <Link key={restaurant.info.id+i} className="menulink" to={"/restaurant/"+restaurant.info.id}  aria-label="Linking Restraunt cards"><ResCard  resData={restaurant} /></Link>;
         })}
       </div>
     </div>
