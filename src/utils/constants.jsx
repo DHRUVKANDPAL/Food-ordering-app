@@ -9,4 +9,4 @@ export const SWIGGY_API3="https://thingproxy.freeboard.io/fetch/https://www.swig
 
 export const VEG_SYMBOL="https://img.icons8.com/color/96/vegetarian-food-symbol.png";
 
-export const LOGO="https://i.ibb.co/Yth3MWq/yummy-high-resolution-logo-transparent.png";
+export const LOGO="https://i.ibb.co/0JfWnMp/yummy-high-resolution-logo-transparent-1-1.webp";

@@ -1,27 +1,28 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./components/Error.jsx";
-import Contact from "./components/Contact.jsx";
+// import Contact from "./components/Contact.jsx";
 import Aboutus from "./components/Aboutus.jsx";
 import Body from "./components/Body.jsx";
 import Resmenu from "./components/Resmenu.jsx";
 import Shimmer from "./components/Shimmer.jsx";
+const Contact=lazy(()=>import("./components/Contact.jsx"));
 const AppLayout = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <Suspense fallback={<Shimmer/>}><Body /></Suspense> },
+      { path: "/", element: <Body /> },
       {
-        path: "/About",
+        path: "/about",
         element: <Aboutus />,
       },
       {
-        path: "/Contact",
-        element: <Contact />,
+        path: "/contact",
+        element: <Suspense fallback={<Shimmer/>}><Contact /></Suspense>,
       },
       {
         path: "/restaurant/:resId",
