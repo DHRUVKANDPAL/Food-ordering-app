@@ -18,7 +18,7 @@ const Header = () => {
           <li><Link to="/about" className="nav-link dark:tw-text-zinc-200" aria-label="nav-link">ABOUT</Link></li>
           <li><Link to="/contact" className="nav-link dark:tw-text-zinc-200" aria-label="nav-link">CONTACT</Link> </li>
           <li>
-          <Link to="/cart" className="nav-link dark:tw-text-zinc-200" aria-label="nav-link"><i className="ri-shopping-cart-fill"></i></Link>
+          <Link to="/cart" className="nav-link dark:tw-text-zinc-200" aria-label="nav-link"><i className="ri-shopping-cart-fill tw-text-xl"></i></Link>
           </li>
           <li>
             {/* <button id="login-btn" aria-label="nav-login-logout-button" onClick={()=>{
