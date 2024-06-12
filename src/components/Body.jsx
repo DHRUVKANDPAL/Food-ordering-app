@@ -71,7 +71,7 @@ const Body = () => {
   ) : (
     <div className="wrap dark:tw-bg-neutral-700 ">
       
-      <div className="form-container tw-w-full tw-h-60 tw-mt-0  tw-bg-hero tw-bg-[cover]"   >
+      <div className="form-container tw-w-full tw-h-60 tw-mt-0  tw-bg-hero2 md:tw-bg-hero tw-bg-[cover]"   >
         
         <div className="search tw-absolute">
           <input
