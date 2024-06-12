@@ -37,7 +37,9 @@ const Cart = () => {
       dispatch(clearCart());
       showNotificationMessage("Cart cleared.");
    };
-
+   const handleCheckout=()=>{
+      showNotificationMessage("Order Placed.");
+   }
    return (
       <div className="tw-container tw-mx-auto tw-p-4">
          <h1 className="tw-text-3xl tw-font-bold tw-mb-6 tw-text-center">Your Cart</h1>
@@ -73,7 +75,7 @@ const Cart = () => {
                      <button onClick={clear} className="tw-bg-red-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-40 sm:tw-w-56">Clear Cart</button>
                   </div>
                   <div className="tw-flex tw-justify-center">
-                     <button className="tw-bg-green-600 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-full md:tw-w-2/3 lg:tw-w-1/3">Proceed to Checkout</button>
+                     <button className="tw-bg-green-600 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-full md:tw-w-2/3 lg:tw-w-1/3" onClick={()=> handleCheckout()}>Proceed to Checkout</button>
                   </div>
                </div>
             )
