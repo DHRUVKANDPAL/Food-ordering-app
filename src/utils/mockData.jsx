@@ -77,7 +77,7 @@ const ResList = [
        locality: "Awadhpuri Colony",
        areaName: "Avas Vikas Colony",
        costForTwo: "₹350 for two",
-       cuisines: ["North Indian", "Chinese"],
+       cuisines: ["South Indian", "Chinese"],
        avgRating: 4.5,
        veg: true,
        parentId: "66911",
