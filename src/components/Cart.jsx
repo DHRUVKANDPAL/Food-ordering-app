@@ -70,7 +70,7 @@ const Cart = () => {
                         <span className="tw-mr-2">Total:</span> 
                         <span>₹{total}</span>
                      </div>
-                     <button onClick={clear} className="tw-bg-red-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-56">Clear Cart</button>
+                     <button onClick={clear} className="tw-bg-red-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-40 sm:tw-w-56">Clear Cart</button>
                   </div>
                   <div className="tw-flex tw-justify-center">
                      <button className="tw-bg-green-600 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-full md:tw-w-2/3 lg:tw-w-1/3">Proceed to Checkout</button>
