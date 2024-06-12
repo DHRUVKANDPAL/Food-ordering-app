@@ -6,7 +6,7 @@ export const seven = {
            card: {
              info: {
                name: "Cafe Bollyfood",
-               avgRating: 4.1,
+               avgRating: 4.7,
                totalRatingsString: "1K+ ratings",
                costForTwoMessage: "₹300 for two",
                cuisines: ["North Indian", "South Indian"],

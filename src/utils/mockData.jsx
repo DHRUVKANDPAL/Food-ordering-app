@@ -449,7 +449,7 @@ const ResList = [
        areaName: "Niyawan",
        costForTwo: "₹300 for two",
        cuisines: ["North Indian", "South Indian", "Tandoor", "Chinese"],
-       avgRating: 4.1,
+       avgRating: 4.7,
        veg: true,
        parentId: "52512",
        avgRatingString: "4.1",

@@ -124,6 +124,7 @@
 .res-card h4 {
   font-weight: 500;
 }
+
 #star {
   display: inline;
   background-color: rgba(25, 207, 25, 0.797);
@@ -218,19 +219,27 @@ button {
     font-size: small;
   }
 }
-.shimmer-card{
+.shimmer-card,.shimmer-card2{
   background-color: #f0f0f0; 
     background-image: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0); 
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
 }
 
-.shimmer-image{
+.shimmer-image,.shimmer-image2{
   background-color: gray;
   background-image: linear-gradient(90deg, #b5b5b5, rgb(164, 164, 164), #b5b5b5);;
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
+.shimmer-banner{
+  background-color: gray;
+  background-image: linear-gradient(90deg, #b5b5b5, rgb(164, 164, 164), #b5b5b5);;
+  background-size: 200% 100%;
+  animation: shimmer 1s infinite;
+  transition: 1.5s ease;
+}
+
 #shimmer-name,#shimmer-content,#shimmer-star,#shimmer-cost{
   width:60%;
   height:9.5%;
@@ -705,4 +714,12 @@ hr {
 .footer-icon-link,.footer-icon-link:hover,.footer-icon-link:focus,.footer-icon-link:active{
   color:black;
   text-decoration: none;
+}
+button{
+  cursor: pointer;
+}
+#resh2,#resh3{
+  background-color: #f0f0f0;
+  color:purple;
+  border-color: #dcdcdc;
 }

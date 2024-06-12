@@ -9,6 +9,7 @@ import Aboutus from "./components/Aboutus.jsx";
 import Body from "./components/Body.jsx";
 import Resmenu from "./components/Resmenu.jsx";
 import Shimmer from "./components/Shimmer.jsx";
+import Cart from "./components/Cart.jsx";
 const Contact=lazy(()=>import("./components/Contact.jsx"));
 const AppLayout = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const AppLayout = createBrowserRouter([
         path: "/restaurant/:resId",
         element: <Resmenu />,
       },
+      {
+        path:"/cart",
+        element: <Cart/>
+      }
     ],
     errorElement: <Error />,
   },
