@@ -26,7 +26,7 @@ const Footer = () => {
         </Link>
         <Link
           className="footer-icon-link"
-          to="https://github.com/DHRUVKANDPAL/Food-ordering-app" aria-label="Linking Github"
+          to="/contact" aria-label="Linking Github"
         >
           <i className="ri-github-fill dark:tw-text-zinc-100"></i>
         </Link>
