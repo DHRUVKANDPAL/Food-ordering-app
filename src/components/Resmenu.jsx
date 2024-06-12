@@ -6,6 +6,8 @@ import { VEG_SYMBOL } from "../utils/constants";
 import useRestaurantData from "../utils/useRestaurantData";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, clearCart } from "../utils/CartSlice";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const Resmenu = () => {
   // const [ResInfo, setResInfo] = useState([]);
   
@@ -26,11 +28,13 @@ const Resmenu = () => {
     cloudinaryImageId,
   } = ResInfo?.data?.cards[0]?.card?.card?.info;
 
-  
+  const showNotificationMessage = (message) => {
+    toast.success(message);
+ };
   
   const handleClick=(items)=>{
     dispatch(addItem(items));
-    // dispatch(clearCart());
+    showNotificationMessage("Item added to cart.");
   };
 
   return (

@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 import { clearCart ,removeItem} from "../utils/CartSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
    const dispatch = useDispatch();
@@ -22,13 +24,18 @@ const Cart = () => {
       newQuantities[index] = newQuantity;
       setQuantities(newQuantities);
    };
+   const showNotificationMessage = (message) => {
+      toast.success(message);
+   };
 
    const remove = (index) => {
       dispatch(removeItem(index));
+      showNotificationMessage("Item removed from cart.");
    };
 
    const clear = () => {
       dispatch(clearCart());
+      showNotificationMessage("Cart cleared.");
    };
 
    return (
@@ -49,7 +56,7 @@ const Cart = () => {
                               <h2 className="tw-text-lg tw-font-medium tw-text-gray-700 tw-ml-4">₹{item?.card?.info?.price * quantities[i]}</h2>
                            </div>
                         </div>
-                        <button onClick={() => remove(i)} className="tw-bg-red-600 tw-text-white tw-rounded tw-py-1 tw-px-2 tw-mt-4 md:tw-mt-0 md:tw-ml-4 tw-border-none tw-w-full sm:tw-w-5/6 md:tw-w-1/6 lg:tw-w-1/12 md:tw-max-w-32" >Remove</button>
+                        <button onClick={() => remove(i)} className="tw-bg-red-500 tw-text-white tw-rounded tw-py-1 tw-px-2 tw-mt-4 md:tw-mt-0 md:tw-ml-4 tw-border-none tw-w-full sm:tw-w-5/6 md:tw-w-1/6 lg:tw-w-1/12 md:tw-max-w-32" >Remove</button>
                      </div>
                   ))
                )
@@ -63,7 +70,7 @@ const Cart = () => {
                         <span className="tw-mr-2">Total:</span> 
                         <span>₹{total}</span>
                      </div>
-                     <button onClick={clear} className="tw-bg-red-600 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-full sm:tw-w-5/6 md:tw-w-1/6 lg:tw-w-1/12 md:tw-max-w-32">Clear Cart</button>
+                     <button onClick={clear} className="tw-bg-red-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-56">Clear Cart</button>
                   </div>
                   <div className="tw-flex tw-justify-center">
                      <button className="tw-bg-green-600 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded tw-border-none tw-w-full md:tw-w-2/3 lg:tw-w-1/3">Proceed to Checkout</button>

@@ -7,6 +7,7 @@ import UserContext from "./utils/UserContext";
 import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import AppStore from "./utils/AppStore";
+import { ToastContainer } from "react-toastify";
 
 function App() {
 //   const[userName,setuserName]=useState();
@@ -20,9 +21,11 @@ function App() {
     <Provider store={AppStore}>
       {/* <UserContext.Provider value={{loggedUser:userName ,setuserName}}> */}
         <div className="top">
+          
         <Header />
         <Outlet />
         <Footer/>
+        <ToastContainer/>
       </div>
       {/* </UserContext.Provider> */}
     </Provider>
