@@ -26,21 +26,6 @@ Check out the live demo of the application [here](https://your-food-delivery-app
 ### Restaurant Menu
 ![Restaurant Menu](screenshots/app2.png)
 
-## Installation
-
-1. Clone the repository
-    ```sh
-    git clone https://github.com/DHRUVKANDPAL/Food-Delivery-App.git
-    ```
-2. Install dependencies
-    ```sh
-    npm install
-    ```
-3. Run the development server
-    ```sh
-    npm run dev
-    ```
-4. Open the app in your preferred web browser at `http://localhost:5173`.
 
 ## Usage
 
