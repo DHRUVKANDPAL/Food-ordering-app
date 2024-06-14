@@ -24,7 +24,7 @@ Check out the live demo of the application [here](https://your-food-delivery-app
 ![Home Page](screenshots/app1.png)
 
 ### Restaurant Menu
-![Restaurant Listing](app2.png)
+![Restaurant Menu](screenshots/app2.png)
 
 ## Installation
 
